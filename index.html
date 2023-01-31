@@ -1,11 +1,31 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>A whale of a greeting</title>
-  </head>
-  <body>
-    <h1>hello, world</h1>
-    <p>Call me Ishmael.</p>
-    <img src="images/breaching_whale.jpg">
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<button class="btn">Hello</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		const Url='https://www.soft98.ir';
+		$('.btn').click(function(){
+			$.ajax({
+				url: Url,
+				type:"GET",
+				success: function(result){
+					console.log(result)
+				},
+				error:function(error){
+					console.log(`Error ${error}`)
+				}
+			})
+		})
+	})
+</script>
+</body>
 </html>
